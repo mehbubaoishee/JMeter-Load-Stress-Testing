@@ -1,6 +1,21 @@
-# Restful Booker API Performance Testing
-Batch No: 17  
-Topic: Performance Testing
+# JMeter Performance Testing-1
+**Name:** Mehbuba Alam Oishee  
+**Batch No:** 17
+
+---
+
+### Project Description
+This project performs **performance testing** on the **Restful Booker API**[](https://restful-booker.herokuapp.com) using **Apache JMeter**. 
+The test simulates the following user scenario: **120,000 users over a 12-hour period** log in, create a booking with random data, and search for the created booking.
+
+## Technology & Tools Used
+- Apache JMeter 5.6.3 – main performance testing tool
+- Standard Thread Groups + Flow Control Action (no plugins required)
+- Gaussian Random Timer
+- JSON Extractor
+- HTML Dashboard Report Generator
+- Microsoft Excel – for documenting test steps and results
+- Git & GitHub – version control and submission  
 
 ## What I Have Done
 - Created `booking.jmx` with Login, Create Booking (random firstname, lastname, totalprice), and Search Booking requests.
@@ -12,10 +27,8 @@ Topic: Performance Testing
 - Generated HTML dashboard reports for both tests.
 - Documented steps and results in Excel file.
 
-**Note**: The target API (restful-booker.herokuapp.com) is a free public demo on Heroku free tier, which has limited resources. This explains the low throughput values.
-
 ## Load Test Results
-- Overall throughput: ~0.6–0.7 transactions/second (similar to stress test)
+- Overall throughput: ~0.6–0.7 transactions/second
 - Average response time: ~500–600 ms
 - Error rate: 0%
 - Server handled the simulated load successfully with no errors.
@@ -23,23 +36,20 @@ Topic: Performance Testing
 ### Load Test Screenshots
 
 
+
 ## Stress Test Results
 - Peak throughput: 0.67 transactions/second
 - Error rate: 0.00%
 - Average response time: 593 ms
-- APDEX Score: 0.821 (Good)
+- APDEX Score: 0.821
 - No degradation or breakdown observed even at 150 concurrent users
-- Bottleneck throughput: ~0.67 transactions/second (sustained stably; no failure point reached within tested load)
+- Bottleneck throughput: ~0.67 transactions/second (no failure point reached within tested load)
 
 ### Stress Test Screenshots
 
 
 ## Excel Reports
-
-
-## Prerequisites
-- Apache JMeter 5.6.3
-- No additional plugins required
+https://docs.google.com/spreadsheets/d/1EVR3Dfs4nw97w079L8FdaR7eWq8KDm9n89htA3c9VkQ/edit?usp=sharing
 
 ## How to Run the Tests
 1. Open `booking.jmx` in JMeter
